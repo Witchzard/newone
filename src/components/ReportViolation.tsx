@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import "leaflet/dist/leaflet.css";
 
 import "leaflet/dist/leaflet.css";
 import { 
@@ -28,7 +29,7 @@ export function ReportViolation() {
     { name: 'Other', icon: MoreHorizontal },
   ];
 
-import "leaflet/dist/leaflet.css";
+
 
 export default function ReportPage() {
 
