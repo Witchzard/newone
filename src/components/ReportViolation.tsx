@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { useEffect } from "react";
-import L from "leaflet";
+
 import "leaflet/dist/leaflet.css";
 import { 
   Plus, 
