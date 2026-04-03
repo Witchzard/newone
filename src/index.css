@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+
+  --color-surface: #111316;
+  --color-surface-dim: #0c0e11;
+  --color-surface-bright: #37393d;
+  --color-surface-container-lowest: #0c0e11;
+  --color-surface-container-low: #1a1c1f;
+  --color-surface-container: #1e2023;
+  --color-surface-container-high: #282a2d;
+  --color-surface-container-highest: #333538;
+  
+  --color-primary: #ffb693;
+  --color-on-primary: #572000;
+  --color-primary-container: #ff6b00;
+  --color-on-primary-container: #572000;
+  
+  --color-secondary: #fff3d2;
+  --color-on-secondary: #332d00;
+  --color-secondary-container: #fdd400;
+  --color-on-secondary-container: #332d00;
+  
+  --color-tertiary: #3ce36a;
+  --color-on-tertiary: #003913;
+  --color-tertiary-container: #00b149;
+  --color-on-tertiary-container: #003913;
+  
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-on-surface: #e2e2e6;
+  --color-on-surface-variant: #c9c5d0;
+  --color-outline: #a98a7d;
+  --color-outline-variant: #5a4136;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.glass-panel {
+  @apply backdrop-blur-xl bg-surface-container/60;
+}
+
+.safety-gradient {
+  background: linear-gradient(45deg, #ffb693 0%, #ff6b00 100%);
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px currentColor;
+  color: transparent;
+}

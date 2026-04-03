@@ -1,0 +1,8 @@
+{
+  "name": "Street Sense",
+  "description": "A crowdsourced traffic safety platform for a safer community.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}

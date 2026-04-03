@@ -1,0 +1,145 @@
+import { Report, Achievement, Reward, User } from './types';
+
+export const MOCK_USER: User = {
+  id: 'u1',
+  name: 'Alex "The Hawk" M.',
+  handle: 'StreetGuardian42',
+  level: 42,
+  points: 12450,
+  reports: 342,
+  streak: 12,
+  rank: 14,
+  avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6ToUAAx8AL9sUlYH5deIcLcCeAxzObUCJYbe7rlB84TwF-3nnvnQAl6AFdLmRu9LSDXfF0S-kuKVgS3KYijN8Vl94eRLVO69bcM43jCZvZvTmyjFZpyNT5qRP_GmaA3JTaCOkqfe0uW32M-vNLseFTT7PcNv4MJhGYx4msnVrFlbCR59kzVrqiKPEIjBgORp5nfz7gU2pE2J49lo_VnY9qUpBfUULKh0Jbsq5r-IRe5mSU4NKzLn_TfBStFjcuObsy6ubB_b9axA',
+};
+
+export const RECENT_REPORTS: Report[] = [
+  {
+    id: 'r1',
+    title: 'Blocked Bike Lane - 5th Ave',
+    type: 'Illegal Parking',
+    location: 'Downtown District',
+    timestamp: '4 hours ago',
+    status: 'Verified',
+    points: 250,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBDuR4CtE2LCWKPFiQiY60GYxrITllFntbzyPuY9YIhpcBR4cBxKIvpOiza2QowRf3gKfFUh2MyRgfIOChcSgrY8jHYjo06vf1RrAVfeaVPXGssyci39lykHfUNWwnDv8sOFtsVNAUOzV4fv0kwOQbE3Y_dsCHja8rjpiPuDL79fdDF4EMu9tgg53hysOuiJ5R-mI4Gf4XDvq6giKHbWmdNhF3S16xsiG5s9XKNG8fVPUq-nkq5zRgNhEIcPeWNQ-bOpgvPKrRWRz4',
+  },
+  {
+    id: 'r2',
+    title: 'Unsecured Barrier - Oak St',
+    type: 'Other',
+    location: 'West End',
+    timestamp: '14 hours ago',
+    status: 'In Progress',
+    points: 0,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA0WScoOyVgMaut_blahjwygTuwhFcfKYwXBss0awRkBAW9O-qcqY_DTS79dotyfju9wFH3s0L-1WjoWkNESmQnOrjmN-VrAd170Zhb84b1StH4j-zDcsOqRkTFJdomI0JnXVeqKVoJfon2lR7tbDawyLixMVaEtaEBxQhLszA3sS7Ux2cqNhob-x22cLBelrpm2Py0wms94ikh8l6N2daL_-Itr-D2U-BQaGURSS8mPL0htsGv1NvlQrdgsFXM7FIOU_znj_cWJcc',
+  },
+  {
+    id: 'r3',
+    title: 'Broken Streetlight - Pier 9',
+    type: 'Other',
+    location: 'Waterfront',
+    timestamp: 'Yesterday',
+    status: 'Resolved',
+    points: 500,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNUoGEBlrb3uI3QWIBIb1kiXaFbQQdHPd0EYOyncgEtvvHUwUuHC9SKiruujLhfSRWcAkabjCcrH2I67hs0FsanQ11BqpBbmndP-E2eonlaFUEyBqAnBbEDIftOedMZs05K4zFFEzJFfvXslYBZBEBenuUFmqkvtKhoN-Kw7vpdIxvMX4HZ9Ln2b8Xz-ycB4a12PVJUmzaFJmUeEofDfoIhaenRqHb1aQGUbnXX7qzmIJv4cPSaNEwJXUnXhrupzUfSe49qCV5XMU',
+  },
+];
+
+export const ACHIEVEMENTS: Achievement[] = [
+  { id: 'a1', title: 'Eagle Eye', description: '100 Verified Reports', icon: 'Eye', unlocked: true },
+  { id: 'a2', title: 'Night Watch', description: '20 Night Reports', icon: 'Moon', unlocked: true },
+  { id: 'a3', title: 'Fast Reactor', description: 'Instant Verification', icon: 'Zap', unlocked: true },
+  { id: 'a4', title: 'City Legend', description: '500 Verified Reports', icon: 'Flame', unlocked: false },
+  { id: 'a5', title: 'Unit Leader', description: 'Lead a local squad', icon: 'Users', unlocked: false },
+  { id: 'a6', title: 'Explorer', description: 'Report in 10 districts', icon: 'Map', unlocked: false },
+];
+
+export const REWARDS: Reward[] = [
+  {
+    id: 'rew1',
+    title: '$25 Fuel Voucher',
+    provider: 'Valid at all major stations',
+    points: 5000,
+    description: 'Get back on the road with this $25 fuel credit. Digital voucher sent instantly to your registered email.',
+    image: 'https://picsum.photos/seed/fuel/800/600',
+    exclusive: true,
+  },
+  {
+    id: 'rew2',
+    title: '$10 Coffee Card',
+    provider: 'Bean & Brew Local Roasters',
+    points: 2500,
+    description: 'Enjoy a morning pick-me-up on the house. Supports local neighborhood coffee shops.',
+    image: 'https://picsum.photos/seed/coffee/800/600',
+  },
+  {
+    id: 'rew3',
+    title: 'Local Safety Donation',
+    provider: 'School Crossing Upgrades',
+    points: 1000,
+    description: "We'll donate $5 to the local pedestrian safety fund in your name. Double points for community spirit!",
+    image: 'https://picsum.photos/seed/safety/800/600',
+    giveBack: true,
+  },
+  {
+    id: 'rew4',
+    title: 'Premium Dashcam',
+    provider: 'Vigilance Pro Series',
+    points: 25000,
+    description: 'The ultimate guardian tool. 4K recording with automatic incident reporting integration.',
+    image: 'https://picsum.photos/seed/dashcam/800/600',
+  },
+  {
+    id: 'rew5',
+    title: 'Wellness Day Pass',
+    provider: 'Zenith Spa & Fitness',
+    points: 8500,
+    description: 'You protect the streets, let us protect your peace. Full day access to gym, pool, and sauna.',
+    image: 'https://picsum.photos/seed/spa/800/600',
+  },
+  {
+    id: 'rew6',
+    title: 'Smart Watch S8',
+    provider: 'Safety Sync Edition',
+    points: 15000,
+    description: 'Sync your reporting with your wrist. Real-time alerts and safety score tracking on the go.',
+    image: 'https://picsum.photos/seed/watch/800/600',
+    outOfStock: true,
+  },
+];
+
+export const ADMIN_QUEUE: Report[] = [
+  {
+    id: 'q1',
+    title: 'Illegal Hydrant Parking',
+    type: 'Illegal Parking',
+    location: '128th St & Madison Ave',
+    timestamp: '2 mins ago',
+    status: 'Pending',
+    points: 0,
+    image: 'https://picsum.photos/seed/hydrant/800/600',
+    priority: 'High',
+  },
+  {
+    id: 'q2',
+    title: 'Expired Meter Flow',
+    type: 'Other',
+    location: 'Times Square North',
+    timestamp: '14 mins ago',
+    status: 'Pending',
+    points: 0,
+    image: 'https://picsum.photos/seed/meter/800/600',
+    priority: 'AI Flagged',
+  },
+  {
+    id: 'q3',
+    title: 'Bike Lane Obstruction',
+    type: 'Illegal Parking',
+    location: 'Broadway & 4th',
+    timestamp: '42 mins ago',
+    status: 'Pending',
+    points: 0,
+    image: 'https://picsum.photos/seed/bike/800/600',
+    priority: 'Routine',
+  },
+];
