@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import { useEffect } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { 
   Plus, 
   Minus, 
@@ -25,6 +28,35 @@ export function ReportViolation() {
     { name: 'Signal Jump', icon: AlertTriangle },
     { name: 'Other', icon: MoreHorizontal },
   ];
+  import { useEffect } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
+export default function ReportPage() {
+
+  useEffect(() => {
+    const map = L.map("map").setView([12.9716, 77.5946], 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors",
+    }).addTo(map);
+
+    map.on("click", (e: any) => {
+      L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+    });
+
+    return () => map.remove();
+  }, []);
+
+  return (
+    <div>
+      <h1>Report Violation</h1>
+
+      <div id="map" style={{ height: "500px", width: "100%" }}></div>
+
+    </div>
+  );
+}
 
   return (
     <div className="flex flex-1 h-[calc(100vh-72px)] overflow-hidden -m-6 md:-m-10">
@@ -34,7 +66,7 @@ export function ReportViolation() {
           <img 
             alt="Map" 
             className="w-full h-full object-cover opacity-60 grayscale" 
-            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1920" 
+            <div id="map" style={{ height: "500px", width: "100%" }}></div>
           />
         </div>
         
