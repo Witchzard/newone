@@ -28,8 +28,7 @@ export function ReportViolation() {
     { name: 'Signal Jump', icon: AlertTriangle },
     { name: 'Other', icon: MoreHorizontal },
   ];
-  import { useEffect } from "react";
-import L from "leaflet";
+
 import "leaflet/dist/leaflet.css";
 
 export default function ReportPage() {
